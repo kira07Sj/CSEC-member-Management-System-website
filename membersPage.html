@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEC Members Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- starting the sidebar section-->
+        <aside>
+            <div class="toggle">
+                <img src="images/Logo.png" alt="" class="logo">
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                        </span>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <a href="#"><span class="material-icons-sharp">
+                    dashboard
+                    </span> <h3>Dashboard</h3>
+                </a>
+
+                <a href="membersPage.html" ><span class="material-icons-sharp">
+                    people
+                    </span> <h3>Members</h3>
+                </a>
+
+                <a href="eventsPage.html"><span class="material-icons-sharp">
+                    history
+                    </span> <h3>Events</h3>
+                </a>
+
+               
+                <a href="settingsPage.html"><span class="material-icons-sharp">
+                    settings
+                    </span><h3>Settings</h3>
+                </a>
+                <a href="indxe.html"><span class="material-icons-sharp">
+                    logout
+                    </span><h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!--End of the sidebar section-->
+        
+
+        <!--starting the main pages-->
+        <main class="members-menu" >
+            <h1>Members</h1>
+            <div class="members-list">
+                <div class="table-title">
+                    <h3 class="titles">Profile</h3>
+                    <h3 class="titles">User Name</h3>
+                    <h3 class="titles">Full Name</h3>
+                    <h3 class="titles">Email Address</h3>
+                    <h3 class="titles">Phone Number</h3>
+                    <h3 class="titles">Password</h3>
+                </div>
+                
+                
+                
+            </div>
+            <div class="add-member-btn">
+                <span class="material-icons-sharp">
+                    add_circle
+                    </span><h3 class="addh1">Add Member</h3>
+            </div>
+            <div class="member-reg">
+                <form action="">
+                    <input type="text" placeholder="User Name">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="password" placeholder="Password">
+                    <input class="submit" type="submit" placeholder="Add Member">
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="JQuery.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

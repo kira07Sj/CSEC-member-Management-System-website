@@ -1,0 +1,662 @@
+:root
+{
+    --color-primary: #6c9bcf;
+    --color-success:  #1b9c85;
+    --color-warning: hsl(45, 90%, 67%);
+    --color-white: #fff;
+    --color-dark: #363949;
+    --color-light: #393c4b4d;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    
+
+}
+
+.dark-mode
+{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0,0,0,0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+*{
+    margin: 0;
+    padding:0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 14px;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    user-select: none;
+    overflow: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+.logo
+{
+    width: 50%;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+}
+
+a{
+    color: var(--color-dark);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2
+{
+    font-weight: 600;
+    font-size: 1.3rem; 
+    margin-top: 1rem;
+}
+h3{
+    font-weight:500;
+    font-size: 1rem;
+    
+}
+
+small{
+    font-size: 0.76rem;
+}
+p{
+    color: var(--color-dark);
+    text-align: justify;
+    align-content: center;
+    margin: 1.2rem 1.2rem 1rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.primary
+{
+    color: var(--color-primary);
+}
+
+.success
+{
+    color: var(--color-success);
+}
+.warning
+{
+    color: var(--color-warning);
+}
+
+.container
+{
+display: grid;
+margin: 0 auto;
+gap: 1.8rem;
+width: 96%;
+grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+
+}
+aside .toggle
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+}
+
+aside .toggle .close
+{
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .sidebar
+{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    border-radius: 20px;
+    height: 80vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+aside .sidebar:hover
+{
+    box-shadow: none;
+    transform: scale(0.995);
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 3.7rem;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+aside .sidebar span
+{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child
+{
+    position: absolute;
+    bottom: 2rem;
+}
+
+aside .sidebar a.active
+{
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    width: 100%;
+    margin-left: 0;
+}
+
+aside .sidebar a:hover
+{
+    margin-left: 0.6rem;
+}
+/*=============================Members page======================================*/
+.members-list
+{
+    width: 80vw;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    animation: memberAnime 2s forwards;
+    transform: translateY(-3rem);
+    opacity: 40%;
+}
+@keyframes memberAnime
+{
+    0%
+    {
+        transform: translateY(-3rem);
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 100%;
+    }
+}
+.members-list .table-title
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem;
+    
+}
+.titles
+{
+    font-weight: 600;
+}
+
+.add-member-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.2rem;
+    transition: .3s ease;
+    position: relative;
+}
+.addh1
+{
+    margin-left: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.add-member-btn span
+{
+    font-size: 2rem;
+}
+.add-member-btn:hover
+{
+    transform: scale(1.049);
+}
+.member-reg 
+{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-color: var(--color-white);
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    border-radius: 20px;
+    left: 35%;
+    top: 8%;
+    transition: .6s;
+    display: none;
+    animation: anime 2s forwards;
+    opacity: 0%;
+}
+@keyframes anime
+{
+    0%{
+        transform: translateY(0);
+    }
+    100%
+    {
+        transform: translateY(1.4rem);
+        opacity: 100%;
+    }
+}
+.member-reg:hover
+{
+box-shadow: none;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.7rem;
+}
+form input
+{
+    width: 340px;
+    height: 50px;
+    border-radius: 10px;
+    border-bottom: .2px solid black;
+    margin: 1rem 0 0 2rem; 
+    transition: .3s;
+}
+form input:hover
+{
+    transform: scale(1.03);
+}
+.submit
+{
+    position: relative;
+    top: 3rem;
+    background-color: var(--color-dark);
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+/*===========================end of members page===============================*/
+
+
+/*==========================Events page========================================*/
+
+.event-viewer
+{
+
+    width: 85vw;
+    height: 85vh;
+    background-color: rgb(233, 233, 233);
+    margin-top: 1.2rem;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 3rem #393c4b4d;
+    animation: animat 2.5s forwards;
+    opacity: 30%;
+    transform: translateX(5rem);
+}
+@keyframes animat
+{
+    0%
+    {
+        transform: translateX(5rem);
+    }
+    100%
+    {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+.event-viewer img
+{
+    width: 100%;
+}
+.img
+{
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+.event-viewer .eventdetial
+{
+    width: 300px;
+    height: 470px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    margin: 2rem 1rem;
+    display: flex;
+    transition: all 0.5s;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    
+    transition: .5s ease;
+}
+
+.event-viewer .eventdetial:hover
+{
+    transform: scale(1.05);
+}
+.add-event-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.2rem;
+    transition: .3s ease;
+    position: relative;
+}
+/*========================= end of event page=======================*/
+
+
+/*===========================settings page===============================*/
+
+.setting-viewer
+{
+    width: 800px;
+    height: 600px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    margin-top: 2rem;
+    margin-left: 16rem;
+    transform: translateX(-5rem);
+    animation: settingAnime 2s forwards;
+    display: flex;
+    overflow-y: hidden;
+    justify-content: space-between;
+    opacity: 30%;
+}
+
+@keyframes settingAnime
+{
+    0%{
+        transform: translateX(-5rem);
+    }
+    100%
+    {
+        transform: translateX(0rem);
+        opacity: 100%;
+    }
+}
+.setting-viewer .settings-holder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.2rem;
+    height: 3.7rem;
+    margin-left: 2rem;
+    top: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.setting-viewer .settings-holder .sh
+{
+    display: flex;
+    transition: all .3s;
+}
+.setting-viewer .settings-holder span
+{
+    font-size: 1.6rem;
+    margin-right: .7rem;
+}
+
+.setting-viewer .settings-holder .sh:hover
+{
+    margin-left: .6rem;
+}
+
+.setting-viewer .settings-sidebar
+{
+    width: 400px;
+    height: 600px;
+    background-color: #919599;
+}
+/*==========================Main Page=============================*/
+
+#mainPage h1 span
+{
+    color: var(--color-dark-variant);
+    display: flex;
+    flex-direction: column;
+    
+}
+#mainPage .sideimg
+{
+width: 300px;
+height: 300px;
+
+border-radius: 15px;
+right: 10rem;
+position: relative;
+background-image: url("images/Logo.png");
+background-position: center;
+background-size: cover;
+margin-top: 4rem;
+animation: imgAnime 4s forwards,
+           hoverimg 5s infinite 4s;
+transform: translatey(-5rem);
+opacity: 30%;
+box-shadow: none;
+}
+@keyframes imgAnime
+{
+    0%{
+        transform: translatey(-5rem);
+    }
+    100%
+    {
+        transform: translateY(0);
+        opacity: 100%;
+        box-shadow: 0 2rem 3rem #393c4b4d;
+    }
+}
+@keyframes hoverimg
+{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.container .header
+{
+    top: 7rem;
+}
+.paragraph
+{
+    width: 600px;
+    
+}
+.Startbtn
+{
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    margin: 20px;
+    margin-left: 100px;
+    border-radius: 20px;
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    transition: .5s;
+    animation: btnAnime 2s forwards 2s;
+    transform: translateX(-4rem);
+    opacity: 0%;
+}
+@keyframes btnAnime
+{
+    0%{
+        transform: translateX(-4rem);  
+    }
+    100%
+    {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+.mainPageHeader
+{
+    font-size: 3.3rem;
+    border-right: 5px solid;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18),
+              cursor .4s step-end infinite alternate;
+    
+    
+
+}
+
+@keyframes cursor
+{
+    50%{
+        border-color: transparent;
+    }
+}
+@keyframes typing
+{
+from {
+    width: 0;
+}
+}
+
+.signIn
+{
+    width: 400px;
+    height: 410px;
+    border-radius: 20px;
+    display: none;
+    background-color: var(--color-white);
+    z-index: 2;
+    margin-left: 35%;
+    margin-top: -20%;
+    justify-items: center;
+    text-align: center;
+    transform: translateY(5rem);
+    transform: scale(.9);
+    box-shadow: none;
+    animation: signinAnime 2.5s forwards;
+    opacity: 0%;
+}
+
+
+.signIn2
+{
+    width: 400px;
+    height: 410px;
+    border-radius: 20px;
+    display: none;
+    background-color: var(--color-white);
+    z-index: 2;
+    margin-left: 35%;
+    margin-top: -20%;
+    justify-items: center;
+    text-align: center;
+    transform: translateY(5rem);
+    transform: scale(.9);
+    box-shadow: none;
+    animation: signinAnime 2.5s forwards;
+    opacity: 0%;
+}
+@keyframes signinAnime {
+    100%{
+        transform: translateY(3rem);
+    transform: scale(1);
+    opacity: 100%;
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    }
+}
+.blur
+{
+    filter: blur(5px);
+    animation: blur 1.2s forwards;
+}
+@keyframes blur
+{
+    0%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(5px);
+    }
+}
+.signIn h3 
+{
+    margin-top: 23rem;
+}
+.signIn2 h3 
+{
+    margin-top: 23rem;
+    
+}
+#switch
+{
+    font-size: 1rem;
+}
+.logBtn
+{
+    width: 150px;
+    height: 40px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    
+    margin-top: 90px;
+    margin-left: 25px;
+    border-radius: 20px;
+    box-shadow: 0 2rem 3rem #393c4b4d;
+    transition: .5s;
+}
